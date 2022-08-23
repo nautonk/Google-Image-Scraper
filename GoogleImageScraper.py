@@ -41,6 +41,10 @@ class GoogleImageScraper():
                 options = Options()
                 if(headless):
                     options.add_argument('--headless')
+                    # options.add_argument('--headless')
+                    # options.add_argument('--no-sandbox')
+                    # options.add_argument('--disable-dev-shm-usage')
+                    # print(webdriver_path)
                 driver = webdriver.Chrome(webdriver_path, chrome_options=options)
                 driver.set_window_size(1400,1050)
                 driver.get("https://www.google.com")
