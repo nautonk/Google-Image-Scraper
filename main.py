@@ -24,7 +24,7 @@ def worker_thread(search_key):
 if __name__ == "__main__":
     #Define file path
     webdriver_path = os.path.normpath(os.path.join(os.getcwd(), 'webdriver', webdriver_executable()))
-    image_path = os.path.normpath(os.path.join(os.getcwd(), 'photos'))
+    image_path = os.path.normpath(os.path.join('/content/drive/MyDrive', 'photos'))
 
     #Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
     search_keys = list(set(["Halloween"]))
