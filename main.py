@@ -27,15 +27,15 @@ if __name__ == "__main__":
     image_path = os.path.normpath(os.path.join(os.getcwd(), 'photos'))
 
     #Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
-    search_keys = list(set(["Halloween"]))
+    search_keys = list(set(["Literacy Book", "National Literacy Day", "Quotes On Literacy", "Literacy Posters", "Reading Day", "Literacy Slogans", "Tolkien Day", "World Reading Day", "Literacy Week Ideas", "Literacy Background", "Literacy Banner", "Happy Literacy Day", "Literacy Word Art", "Literacy Day Activities", "September Special Days", "Happy Book Day", "International Literacy Day Clip Art", "International Day of éducation", "Literacy Night Clip Art", "Computer Literacy Day", "Indigenous Language", "Reading Festival", "Roald Dahl Day", "Family Literacy Activities", "Storytelling", "Cien Anos De Soledad", "Literacy Cover Page", "Literacy Development", "Neuromythe", "National Literacy Month", "Financial Literacy Month", "Special Day Quotes", "Quotes About Literacy", "Special Days of the Year", "Literacy Fair", "Littaracy", "International Book Day", "Images of Digital Literacy", "International Literacy Day Logo", "September 8 Day", "Family Literacy Night Flyer", "International Peace Day", "Adult Illiteracy", "Dr. Seuss Day", "Happy International Kids Day", "Literacy Games and Activities", "International Day of Education", "Digital Learning Day Craft", "Celebrate Literacy", "Digitally Literate"]))
 
     #Parameters
-    number_of_images = 5                # Desired number of images
+    number_of_images = 50                # Desired number of images
     headless = True                     # True = No Chrome GUI
     min_resolution = (0, 0)             # Minimum desired image resolution
     max_resolution = (9999, 9999)       # Maximum desired image resolution
     max_missed = 1000                   # Max number of failed images before exit
-    number_of_workers = 1               # Number of "workers" used
+    number_of_workers = 2               # Number of "workers" used
     keep_filenames = True              # Keep original URL image filenames
 
     #Run each search_key in a separate thread
