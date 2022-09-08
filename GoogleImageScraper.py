@@ -25,7 +25,7 @@ from PIL import Image
 import patch
 
 class GoogleImageScraper():
-    def __init__(self, webdriver_path, image_path, search_key="cat", number_of_images=1, headless=True, min_resolution=(0, 0), max_resolution=(1920, 1080), max_missed=10):
+    def __init__(self, webdriver_path, image_path, search_key="cat", extra_search_params="", number_of_images=1, headless=True, min_resolution=(0, 0), max_resolution=(1920, 1080), max_missed=10):
         #check parameter types
         image_path = os.path.join(image_path, search_key)
         if (type(number_of_images)!=int):
@@ -60,12 +60,15 @@ class GoogleImageScraper():
                 if (not is_patched):
                     exit("[ERR] Please update the chromedriver.exe in the webdriver folder according to your chrome version:https://chromedriver.chromium.org/downloads")
 
+        if not extra_search_params == '':
+            extra_search_params = ' '+extra_search_params
+
         self.driver = driver
         self.search_key = search_key
         self.number_of_images = number_of_images
         self.webdriver_path = webdriver_path
         self.image_path = image_path
-        self.url = "https://www.google.com/search?q=%s&source=lnms&tbm=isch&tbs=itp:clipart,isz:l&sa=X&ved=2ahUKEwie44_AnqLpAhUhBWMBHUFGD90Q_AUoAXoECBUQAw&biw=1920&bih=947"%(search_key)
+        self.url = "https://www.google.com/search?q=%s%s&source=lnms&tbm=isch&tbs=itp:clipart,isz:l&sa=X&ved=2ahUKEwie44_AnqLpAhUhBWMBHUFGD90Q_AUoAXoECBUQAw&biw=1920&bih=947"%(search_key,extra_search_params)
         self.headless=headless
         self.min_resolution = min_resolution
         self.max_resolution = max_resolution

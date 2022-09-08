@@ -14,7 +14,7 @@ from patch import webdriver_executable
 
 def worker_thread(search_key):
     image_scraper = GoogleImageScraper(
-        webdriver_path, image_path, search_key, number_of_images, headless, min_resolution, max_resolution)
+        webdriver_path, image_path, search_key, extra_search_params, number_of_images, headless, min_resolution, max_resolution)
     image_urls = image_scraper.find_image_urls()
     image_scraper.save_images(image_urls, keep_filenames)
 
@@ -27,16 +27,17 @@ if __name__ == "__main__":
     image_path = os.path.normpath(os.path.join(os.getcwd(), 'photos'))
 
     #Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
-    search_keys = list(set(["Literacy Book", "National Literacy Day", "Quotes On Literacy", "Literacy Posters", "Reading Day", "Literacy Slogans", "Tolkien Day", "World Reading Day", "Literacy Week Ideas", "Literacy Background", "Literacy Banner", "Happy Literacy Day", "Literacy Word Art", "Literacy Day Activities", "September Special Days", "Happy Book Day", "International Literacy Day Clip Art", "International Day of éducation", "Literacy Night Clip Art", "Computer Literacy Day", "Indigenous Language", "Reading Festival", "Roald Dahl Day", "Family Literacy Activities", "Storytelling", "Cien Anos De Soledad", "Literacy Cover Page", "Literacy Development", "Neuromythe", "National Literacy Month", "Financial Literacy Month", "Special Day Quotes", "Quotes About Literacy", "Special Days of the Year", "Literacy Fair", "Littaracy", "International Book Day", "Images of Digital Literacy", "International Literacy Day Logo", "September 8 Day", "Family Literacy Night Flyer", "International Peace Day", "Adult Illiteracy", "Dr. Seuss Day", "Happy International Kids Day", "Literacy Games and Activities", "International Day of Education", "Digital Learning Day Craft", "Celebrate Literacy", "Digitally Literate"]))
+    search_keys = list(set(["Origami Paper Art", "Origami Cube", "Origami Bookmark", "Origami Step by Step", "Origami Dragon", "Easy Origami", "Origami Fox", "Origami Dress", "DIY Origami", "Origami Print", "Origami Decorations", "Origami Tools", "Origami Crafts", "Origami Letters", "Funny Origami", "Kirigami Origami", "Japanese Origami", "Origami with Money", "Advanced Origami", "Origami Art", "Origami Kusudama", "Origami Objects", "Origami Decor", "Modular Origami", "Origami Club", "Origami Shapes", "Cool Origami Ideas", "Origami Human", "Beautiful Origami", "Origami Star", "Origami Boxes", "Origami World", "Japanese Origami Paper", "Modern Origami", "Japan Origami", "Origami Projects", "Beginner Origami", "Origami Ninja", "Origami Baby", "Origami Butterflies", "Origami Angel", "Origami Dove", "Origami Drawing", "Origami Love", "Fabric Origami", "Origami People", "Origami Artist", "Origami Cat", "Origami Boxes Easy", "Origami Yoda", "Origami Gift Box", "Origami Tessellation", "Origami Bug", "Origami Bracelet", "Unit Origami", "Origami Jewelry", "Fun Origami", "Origami Goldfish", "Origami Chair", "Origami Sheets", "Traditional Origami", "Origami Furniture", "Origami Frog", "Origami Paper Lanterns", "Origami Umbrella", "Difficult Origami", "Geometric Origami", "Origami Anime", "Origami Magic", "Origami Book"]))
 
     #Parameters
-    number_of_images = 50                # Desired number of images
+    number_of_images = 200                # Desired number of images
     headless = True                     # True = No Chrome GUI
-    min_resolution = (0, 0)             # Minimum desired image resolution
+    min_resolution = (1000, 1500)             # Minimum desired image resolution
     max_resolution = (9999, 9999)       # Maximum desired image resolution
     max_missed = 1000                   # Max number of failed images before exit
     number_of_workers = 2               # Number of "workers" used
     keep_filenames = True              # Keep original URL image filenames
+    extra_search_params = '-inurl:freepik.com'
 
     #Run each search_key in a separate thread
     #Automatically waits for all threads to finish
