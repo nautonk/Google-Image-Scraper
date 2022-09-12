@@ -38,6 +38,10 @@ if __name__ == "__main__":
     number_of_workers = 2               # Number of "workers" used
     keep_filenames = True              # Keep original URL image filenames
     extra_search_params = '-inurl:freepik.com'
+=======
+    number_of_workers = 1               # Number of "workers" used
+    keep_filenames = False              # Keep original URL image filenames
+>>>>>>> 8673f69 (fix)
 
     #Run each search_key in a separate thread
     #Automatically waits for all threads to finish
