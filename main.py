@@ -46,7 +46,7 @@ if __name__ == "__main__":
              "Origami Magic", "Origami Book"]))
 
     # Parameters
-    number_of_images = 200  # Desired number of images
+    number_of_images = 1  # Desired number of images
     headless = True  # True = No Chrome GUI
     min_resolution = (1000, 1500)  # Minimum desired image resolution
     max_resolution = (9999, 9999)  # Maximum desired image resolution
