@@ -201,7 +201,7 @@ class GoogleImageScraper():
 
     def altToSlug(self, alt):
         title = alt
-        result = re.sub('[\-\|]', '|', title)
+        result = re.sub('[\-\|\~]', '|', title)
         result = result.split('|')
         if len(result) > 1:
             result.pop()
