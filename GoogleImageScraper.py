@@ -174,15 +174,15 @@ class GoogleImageScraper():
                             else:
                                 # filename = "%s%s.%s" % (search_string, str(indx), image_from_web.format.lower())
                                 filename = "%s.%s" % (search_string, image_from_web.format.lower())
-                                print(filename)
 
                             image_path = os.path.join(self.image_path, filename)
-                            print(
-                                f"[INFO] {self.search_key} \t {indx} \t Image saved at: {image_path}")
                             image_from_web.save(image_path)
+                            print(f"[INFO] {self.search_key} \t {indx} \t Image saved at: {image_path}")
                         except OSError:
+                            print(f"[ERROR] {self.search_key} \t {indx} \t FAILED to save data at: {image_path}")
                             rgb_im = image_from_web.convert('RGB')
                             rgb_im.save(image_path)
+
                         image_resolution = image_from_web.size
                         if image_resolution != None:
                             if image_resolution[0] < self.min_resolution[0] or image_resolution[1] < \
@@ -190,6 +190,7 @@ class GoogleImageScraper():
                                     image_resolution[1] > self.max_resolution[1]:
                                 image_from_web.close()
                                 os.remove(image_path)
+                                print(f"[WARNING] {self.search_key} \t {indx} \t Image removed because does not meet required size at: {image_path}")
 
                         image_from_web.close()
             except Exception as e:

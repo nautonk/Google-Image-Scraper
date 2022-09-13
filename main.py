@@ -30,29 +30,14 @@ if __name__ == "__main__":
 
     # Add new search key into array ["cat","t-shirt","apple","orange","pear","fish"]
     search_keys = list(
-        set(["Origami Paper Art", "Origami Cube", "Origami Bookmark", "Origami Step by Step", "Origami Dragon",
-             "Easy Origami", "Origami Fox", "Origami Dress", "DIY Origami", "Origami Print", "Origami Decorations",
-             "Origami Tools", "Origami Crafts", "Origami Letters", "Funny Origami", "Kirigami Origami",
-             "Japanese Origami", "Origami with Money", "Advanced Origami", "Origami Art", "Origami Kusudama",
-             "Origami Objects", "Origami Decor", "Modular Origami", "Origami Club", "Origami Shapes",
-             "Cool Origami Ideas", "Origami Human", "Beautiful Origami", "Origami Star", "Origami Boxes",
-             "Origami World", "Japanese Origami Paper", "Modern Origami", "Japan Origami", "Origami Projects",
-             "Beginner Origami", "Origami Ninja", "Origami Baby", "Origami Butterflies", "Origami Angel",
-             "Origami Dove", "Origami Drawing", "Origami Love", "Fabric Origami", "Origami People", "Origami Artist",
-             "Origami Cat", "Origami Boxes Easy", "Origami Yoda", "Origami Gift Box", "Origami Tessellation",
-             "Origami Bug", "Origami Bracelet", "Unit Origami", "Origami Jewelry", "Fun Origami", "Origami Goldfish",
-             "Origami Chair", "Origami Sheets", "Traditional Origami", "Origami Furniture", "Origami Frog",
-             "Origami Paper Lanterns", "Origami Umbrella", "Difficult Origami", "Geometric Origami", "Origami Anime",
-             "Origami Magic", "Origami Book"]))
+        set(["Female Cartoon", "Children Cartoon", "Cartoon Doodles", "Cartoon Face", "Cartoon People", "Horse Cartoon", "Cartoon Sketches", "Cartoon Funnies", "Cartoon Movies", "Teacher Cartoon", "Awesome Cartoon", "Panda Cartoon", "Cartoon Wallpaper", "Pig Cartoon", "List of Cartoons", "Number 7 Cartoon", "Cartoon Eyes", "Robot Cartoon", "Book Cartoon", "Cartoon Animals", "Cute Cartoon", "Cartoon Lovers", "Cartoons to Draw", "Food Cartoon", "Carton Box", "Pikachu Cartoon", "Cartoon Background", "How to Draw Cartoons", "Friends Cartoon", "Weird Cartoons", "Rabbit Cartoon", "Cartoon Objects", "Car Cartoon", "Classic Cartoons", "Baby Cartoon", "Om Nom Cartoon", "Cartoon Ghost", "Simple Cartoon", "Cartoon Couple", "Easy Cartoon", "Dog Cartoon", "Monkey Cartoon", "Cartoon Bunny", "English Cartoon", "Cartoon Strip", "Cake Cartoon", "Cow Cartoon", "Name Cartoon", "Penguin Cartoon", "Human Cartoon", "Heart Cartoon", "Cartoon Figures", "Forgotten Cartoons", "90s Kids Cartoons", "Cartoon Graphics", "Cartoon Heroes", "Top 10 Cartoons", "Cartoon Puppy", "Weather Cartoon", "Minion Cartoon", "Cartoon Clip Art", "Bugs Bunny Cartoons", "Head Cartoon", "Fish Cartoon", "School Cartoon", "Tiger Cartoon", "Bee Cartoon", "Unicorn Cartoon"]))
 
     # Parameters
-    number_of_images = 1  # Desired number of images
+    number_of_images = 50  # Desired number of images
     headless = True  # True = No Chrome GUI
-    min_resolution = (1000, 1500)  # Minimum desired image resolution
+    min_resolution = (1000, 1000)  # Minimum desired image resolution
     max_resolution = (9999, 9999)  # Maximum desired image resolution
     max_missed = 1000  # Max number of failed images before exit
-    number_of_workers = 2  # Number of "workers" used
-    keep_filenames = True  # Keep original URL image filenames
     extra_search_params = '-inurl:freepik.com'
     number_of_workers = 1  # Number of "workers" used
     keep_filenames = False  # Keep original URL image filenames
