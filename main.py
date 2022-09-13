@@ -35,7 +35,7 @@ if __name__ == "__main__":
     # Parameters
     number_of_images = 50  # Desired number of images
     headless = True  # True = No Chrome GUI
-    min_resolution = (1000, 1000)  # Minimum desired image resolution
+    min_resolution = (700, 700)  # Minimum desired image resolution
     max_resolution = (9999, 9999)  # Maximum desired image resolution
     max_missed = 1000  # Max number of failed images before exit
     extra_search_params = '-inurl:freepik.com -inurl:pngtree.com'
