@@ -162,7 +162,7 @@ class GoogleImageScraper():
                 print("[INFO] Image url:%s" % (image_url['src']))
                 # search_string = ''.join(e for e in self.search_key if e.isalnum())
                 search_string = self.altToSlug(image_url['alt'])
-                image = requests.get(image_url['src'], timeout=5)
+                image = requests.get(image_url['src'], timeout=5, verify=False)
                 if image.status_code == 200:
                     with Image.open(io.BytesIO(image.content)) as image_from_web:
                         try:
