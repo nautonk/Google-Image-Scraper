@@ -38,7 +38,7 @@ if __name__ == "__main__":
     min_resolution = (700, 700)  # Minimum desired image resolution
     max_resolution = (9999, 9999)  # Maximum desired image resolution
     max_missed = 1000  # Max number of failed images before exit
-    extra_search_params = '-inurl:freepik.com -inurl:pngtree.com -inurl:alamy.com -inurl:lovepik.com'
+    extra_search_params = '-inurl:freepik.com -inurl:pngtree.com -inurl:alamy.com -inurl:lovepik.com -inurl:canstockphoto.com'
     number_of_workers = 2  # Number of "workers" used
     keep_filenames = False  # Keep original URL image filenames
 
